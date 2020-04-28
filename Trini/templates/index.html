@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Seasons in Bariloche</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!-- import the webpage's stylesheet -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-light bg-dark navbar navbar-dark "
+      >
+        <a class="navbar-brand" href="#">Inicio</a>
+        <ul class="nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Quienes somos </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Ayuda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+      <div
+        class="cover d-flex justify-content-center align-items-center flex-column"
+      >
+        <h1>
+          Bariloche-Patagonia Argentina
+        </h1>
+        <p>
+          <button
+            class="btn btn-danger
+                         "
+          >
+            Descubre
+          </button>
+          Tu lugar en el mundo
+        </p>
+      </div>
+    </header>
+    <section>
+      <div class="container mt-5 mb-5">
+        <div class="row justify-content-start">
+          <div class="col-12 col-sm-6 mt-2">
+            <div class="card">
+              <img
+                src="https://cdn.glitch.com/84964c4a-9d94-430f-b896-28dc1b38ed59%2Frsz_miha-rekar-isvtbknhj2g-unsplash.jpg?v=1587639833822"
+                class="card-img card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Gastronomia</h5>
+                <p class="card-text">
+                  Listas de lugares recomendados para comer segun donde estes
+                </p>
+                <a href="#" class="btn btn-primary">Entrar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 mt-2">
+            <div class="card">
+              <img
+                src="https://cdn.glitch.com/84964c4a-9d94-430f-b896-28dc1b38ed59%2Frsz_img_7281.jpg?v=1587556274767"
+                class=" card-img card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Turismo</h5>
+                <p class="card-text">
+                  Enterate de todas las actividades que podes hacer
+                </p>
+                <a href="#" class="btn btn-primary">Entrar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 mt-2">
+            <div class="card">
+              <img
+                src="https://cdn.glitch.com/84964c4a-9d94-430f-b896-28dc1b38ed59%2Frsz_kelsey-chance-tah2ca_bl5g-unsplash.jpg?v=1587640210361"
+                class="card-img card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Entretenimiento</h5>
+                <p class="card-text">
+                  Enterate de las actividades sociales tanto de diurnas como
+                  nocturnas
+                </p>
+                <a href="#" class="btn btn-primary">Entrar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6   mt-2">
+            <div class="card">
+              <img
+                src="https://cdn.glitch.com/84964c4a-9d94-430f-b896-28dc1b38ed59%2Frsz_plqml-felipe-pelaquim-1qvusvrkrmi-unsplash.jpg?v=1587640421788"
+                class="card-img card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Alojamiento</h5>
+                <p class="card-text">
+                  Descubir distintas opciones de alojamiento segun tus
+                  preferencias
+                </p>
+                <a href="#" class="btn btn-primary">Entrar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

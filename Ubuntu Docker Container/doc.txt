@@ -1,0 +1,117 @@
+Documentacion:
+
+*Como hacer un container para hostear una pagina web localmente*
+
+1)) Ingresar a ProxMox
+
+1) Ingresar a https://cleopatra.um.edu.ar:8006
+2) Poner como usuario root y como contrase√a GNUeslo+
+
+
+2)) Creacion del Conteiner
+
+1) Hacer click en Create CT
+2) Crear una contrase√a, un nombre para el container (HostName), elegir un ID y el nodo (deberia ser Cleopatra)
+3) En la pesta√a de Template, elegir local como storage y como template debian-8
+4) En la pesta√a de Network poner a IPv4 como DHCP
+5) Finish
+
+3)) Crear un usario
+
+Ingresar en la consola del Container de ProxMox: 
+	useradd [Nombre-usuario]
+Seguir las indicaciones
+
+4)) Agregar al usuario al grupo sudo
+
+Ingresar en la consola del Container de ProxMox:
+	apt install sudo && apt install vim
+	vim /etc/sudoers
+
+Una vez se abra vim, agregar debajo de la linea root ALL=(ALL:ALL) ALL la linea [Nombre-usuario] ALL=(ALL:ALL) ALL
+
+Buscar la ip del container con el comando ip a ,y copiarlo
+
+5)) Acceder mediante SSH
+
+1) Desde la terminal de la pc, escribir ssh [Nombre-usuario]@[ip-container]
+2) Ingresar la contrase√a del usuario
+
+
+6)) Instalar Apache2
+
+1) Ingresar en la terminal
+	sudo su
+	apt install apache2
+
+
+7)) Modificar el archivo index.html
+
+1) Ingresar en la terminal:
+	rm var/www/html/index.html
+	vim var/www/html/index.html
+
+2) Copiar en el archivo lo siguiente:
+
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>LucaSor1a</title>
+    </head>
+    <body>
+        <style>
+                @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+    
+                .pagina {
+                    position: fixed;
+                    background-color: #c9d1d3;
+                    width: 50%;
+                    bottom: 25%;
+                    left: 25%;
+                    height: 50%;
+                    border-radius: 15px;
+                    padding: 5px;
+                    display: inline-block;
+                    transition: 0.25s;
+                }
+
+                .pagina:hover{
+                    background-color: #00909e;
+                    color: ivory;
+                }
+    
+                .texto {
+                    text-align: center;
+                    position: relative;
+                    width: auto;
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 150%;
+                }
+    
+                .imagen {
+                    height: 100;
+                    width: auto;
+                    position: relative;
+                    align-content: center;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+    
+                body {
+                    background-color: #1b2a49;
+                }
+            </style>
+        <div class="pagina">
+            <p class="texto">Descarga la documentacion haciendo click en la imagen:</p>
+            <a href="doc.txt" download><img src="https://www.colegioays.com/wp-content/uploads/2016/06/documentos.png" alt=":)" class="imagen"></a>
+        </div>
+    </body>
+</html>
+
+
+
+
+3) Ingresar a la direccion ip del container

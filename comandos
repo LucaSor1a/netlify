@@ -16,4 +16,6 @@ docker image rm <nombre-imagen>  //borrar imagenes de docker
 
 docker image ls  //mustra repositorios de imagenes
 
-docker build -t <nombre-instancia> .  //crea una instancia
+docker build -t <nombre-instancia> .  //crea una instancia en minusculas y sin "_"
+
+docker run <nombre-instancia>   //corre la instancia (-it la hace interactiva)

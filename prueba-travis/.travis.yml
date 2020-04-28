@@ -3,7 +3,7 @@ language: python
 python:
   - "3.6"
 script:
-  - coverage run test_sorting.py
+  - coverage run ./Sorting/test_sorting.py
 
 install:
   - pip install -r requirements.txt
