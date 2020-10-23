@@ -9,7 +9,6 @@ body,
 }
 
 .blurred-bg-container {
-  background: url('./4.jpg');
   height: 100vh; /* =h */
   background-size: cover;
   z-index: -3;

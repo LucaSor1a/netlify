@@ -301,9 +301,8 @@ var xx = setInterval(function() {
 
 
 
-//var random_background = './' + toString(Math.floor(Math.random() * 4) + 1) + '.jpg';
-//random_background = '4.jpg';
-//document.getElementById('cool').style.backgroundImage = "url(4.jpg)"; 
+var random_background = '"./Cuenta atras/' + (Math.floor(Math.random() * 4) + 1) + '.jpg"';
+document.getElementById('cool').style.background = "url(" + random_background + ")"; 
 
 
 
