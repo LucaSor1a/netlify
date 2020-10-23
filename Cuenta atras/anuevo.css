@@ -1,0 +1,71 @@
+
+@import "compass/css3";
+
+@import url('https://fonts.googleapis.com/css?family=Dosis:300,400,700|Lato:100,300,400,700,900|Montserrat:100,300,400,500,700,900|Noto+Sans|Open+Sans:300,400,700|Oswald:300,400,700|PT+Sans:400,700|Raleway+Dots|Raleway:100,300,400,500,700,900|Roboto+Condensed:300,400,700|Roboto:100,300,400,700,900|Source+Sans+Pro:300,400,700,900');
+
+body,
+.blurred-bg-container .content h1 {
+  margin: 0;
+}
+
+.blurred-bg-container {
+  background: url(2019.jpg);
+  height: 100vh; /* =h */
+  background-size: cover;
+  z-index: -3;
+}
+
+.blurred-bg-container .content {
+  background: inherit;
+  width: 100%; /* =cw */
+  height: 20%; /* =ch */
+  border-top: 0.2em solid #fafafa;
+  border-bottom: 0.2em solid #fafafa;
+  position: absolute;
+  top: 50%; /* =ct */
+  left: 50%; /* =cl */
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.blurred-bg-container .blur {
+  background: inherit;
+  height: 100vh; /* h */
+  width: 100%; /* (100/cw) x 100% */
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(
+    0%,
+    -40%
+  ); /* - [cl - (cw/2)] % ,  -[ct - (ch/2)] % */
+  filter: blur(5px);
+  z-index: -1;
+}
+
+.blurred-bg-container .text {
+  box-sizing: border-box; /* so that padding is included in height */
+  color: #fafafa;
+  font-family: Roboto;
+  font-weight: bolder;
+  font-size: 36px;
+  height: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+canvas{
+  z-index: 3;
+  width: auto;
+  height: auto;
+  position: absolute;
+}
+
+
+#audio{
+display: none
+}

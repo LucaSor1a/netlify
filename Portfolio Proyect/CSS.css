@@ -1,0 +1,22 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+body {
+	background:#f2f2f2;
+}
+
+.main {
+	width:90%;
+	max-width:1000px;
+	margin:20px auto;
+}
+
+.slides {
+	width:100%;
+}
+
+.slides img {
+	width:100%;
+}
